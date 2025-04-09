@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: videobum-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot.py
+    envVars:
+      - key: API_TOKEN
+        sync: false
+      - key: OWNER_ID
+        sync: false
